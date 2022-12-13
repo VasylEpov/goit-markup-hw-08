@@ -8,6 +8,7 @@
   --footer-contacts-color: rgba(255, 255, 255, 0.6);
   --icon-logo-border: #afb1b8;
   --function-time: cubic-bezier(0.4, 0, 0.2, 1);
+  --text-color: #757575
 }
 
 body {
@@ -22,6 +23,9 @@ body {
 .list {
   list-style-type: none;
 }
+
+
+
 
 img {
   display: block;
@@ -657,9 +661,16 @@ address {
   transition: transform 250ms var(--function-time);
 }
 
-.thumb-pfolio:hover .thumb-pfolio-text {
-  transform: translateY(0);
+.example-pfolio {
+  text-decoration: none;
+  color: inherit;
 }
+
+a.example-pfolio:hover .thumb-pfolio-text,
+a.example-pfolio:focus .thumb-pfolio-text {
+  transform: translateY(0);
+} 
+
 
 .backdrop {
   position: fixed;
