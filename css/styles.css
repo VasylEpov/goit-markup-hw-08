@@ -718,6 +718,7 @@ a.example-pfolio:focus .thumb-pfolio-text {
 
 .hero-btn-close:hover .icon-close{
   fill: var(--accent-color);
+  transition: fill 250ms var(--function-time);
 }
 
 .icon-close {
@@ -783,11 +784,13 @@ a.example-pfolio:focus .thumb-pfolio-text {
 
 .form-field:focus-within > .modal-icon {
   fill:var(--accent-color);
+  transition: fill 250ms var(--function-time);
 }
 
 .form-field:focus-within > .form-textarea,
 .form-field:focus-within > .form-input {
   border: 1px solid var(--accent-color);
+  transition: border 250ms var(--function-time);
 }
 
 .form-textarea {
