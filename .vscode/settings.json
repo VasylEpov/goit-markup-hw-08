@@ -1,4 +1,18 @@
 {
     "liveServer.settings.port": 5501,
-    "editor.wordWrap": "on"
+    "editor.wordWrap": "on",
+
+    "liveSassCompile.settings.formats":[
+       {
+           "format": "expanded",
+           "extensionName": ".css",
+           "savePath": "/css"
+       },
+       {
+           "extensionName": ".min.css",
+           "format": "compressed",
+           "savePath": "/css"
+       }
+   
+   ]
 }

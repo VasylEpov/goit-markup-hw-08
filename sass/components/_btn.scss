@@ -1,0 +1,25 @@
+.button {
+    font-family: inherit;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    font-weight: 500;
+    background-color: var(--bg-light-grey-color);
+  }
+
+  .btn-container {
+    width: 575px;
+    @extend %flex-align;
+    margin: 0 auto 51px;
+  }
+  
+  .btn-filter {
+    padding: 6px 22px;
+    margin-right: 8px;
+    @include font(16px, 500, 1.56,0.04em);
+    font-family: "Roboto", sans-serif;
+  }
+
+  li:nth-last-child(1) .btn-filter {
+    margin-right: 0;
+  }
