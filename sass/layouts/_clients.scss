@@ -1,47 +1,46 @@
-.section-clients {
+.clients {
     background: var(--primary-white-color);
+    &__list {
+      display: flex;
+      justify-content: center;
+    }
+    &__item {
+      width: 170px;
+      height: 92px;
+      border: 1px solid var(--icon-logo-border);
+      border-radius: 4px;
+      
+      &:not(:last-child) {
+      margin-right: 30px;
+      }
+    }
+    &__link {
+      @extend %flex-align;
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+      
+      &:hover,
+      &:focus {
+      border: 1px solid var(--accent-color);
+      transition: border 250ms var(--function-time);
+      }
+  
+      &:hover .clients__icon,
+      &:focus .clients__icon {
+      fill: var(--accent-color);
+      transition: fill 250ms var(--function-time);
+      }
+    }
+
+      &__icon {
+      align-items: center;
+      justify-content: center;
+      fill: var(--icon-logo-border);
+    }
   }
   
-  .section-clients .container {
+  .container--clients {
     display: block;
   }
   
-  .clients-list {
-    display: flex;
-    justify-content: center;
-  }
-  .clients-item {
-    width: 170px;
-    height: 92px;
-    border: 1px solid var(--icon-logo-border);
-    border-radius: 4px;
-  }
-  
-  .clients-item:not(:last-child) {
-    margin-right: 30px;
-  }
-  
-  .clients-link {
-    @extend %flex-align;
-    width: 100%;
-    height: 100%;
-    justify-content: center;
-  }
-  
-  .clients-link:hover,
-  .clients-link:focus {
-    border: 1px solid var(--accent-color);
-    transition: border 250ms var(--function-time);
-  }
-  
-  .clients-icon {
-    align-items: center;
-    justify-content: center;
-    fill: var(--icon-logo-border);
-  }
-  
-  .clients-link:hover .clients-icon,
-  .clients-link:focus .clients-icon {
-    fill: var(--accent-color);
-    transition: fill 250ms var(--function-time);
-  }

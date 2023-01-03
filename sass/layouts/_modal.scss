@@ -1,3 +1,21 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  opacity: 1;
+  transition: opacity 250ms var(--function-time);
+  z-index: 1;
+}
+
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 250ms var(--function-time);
+}  
+
 .modal {
     position: absolute;
     top: 50%;
@@ -28,7 +46,8 @@
   }
   
   
-  .hero-btn-close:hover .icon-close{
+  .hero-btn-close
+    &:hover .icon-close{
     fill: var(--accent-color);
     transition: fill 250ms var(--function-time);
   }
@@ -46,13 +65,6 @@
     padding-right: 40px;
   }
   
-  .form-field {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 10px;
-    position: relative;
-  }
   
   
   .form-field label {
@@ -88,17 +100,36 @@
   }
     
   
-  .form-field:focus-within > .modal-icon {
-    fill:var(--accent-color);
-    transition: fill 250ms var(--function-time);
-  }
-  
-  .form-field:focus-within > .form-textarea,
-  .form-field:focus-within > .form-input {
+  .form-field {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    position: relative;
+    
+    // &:focus-within > .modal-icon {
+    //   fill:var(--accent-color);
+    //   transition: fill 250ms var(--function-time);
+    // }
+    
+    // &:focus-within > .form-textarea,
+    // &:focus-within > .form-input {
+    // border: 1px solid var(--accent-color);
+    // transition: border 250ms var(--function-time);
+    // }
+    
+    &:hover > .form-textarea,
+    &:hover > .form-input {
     border: 1px solid var(--accent-color);
     transition: border 250ms var(--function-time);
+    }
+    
+    &:hover > .modal-icon {
+    fill:var(--accent-color);
+    transition: fill 250ms var(--function-time);
+    }
   }
-  
+ 
   .form-textarea {
     box-sizing: border-box;
     outline: none;
@@ -167,17 +198,7 @@
       margin-left: 5px;
     }
   
-    .btn-send {
-      font-family: inherit;
-      border: none;
-      border-radius: 4px;
-      @include font(16px, 700, 1.88, 0.06em);
-      text-align: center;
-      color: var(--primary-white-color);
-      background: var(--accent-color);
-      margin: 0 auto;
-      padding: 10px 32px;
-    }
+    
   
     .mail-textarea {
       box-sizing: border-box;
@@ -192,17 +213,5 @@
       resize: none;
     }
   
-    .btn-follow {
-      font-family: inherit;
-      border: none;
-      border-radius: 4px;
-      @include font(16px, 700, 1.88, 0.06em);
-      @extend %flex-align;
-      text-align: center;
-      color: var(--primary-white-color);
-      background: var(--accent-color);
-      margin: 0 auto;
-      padding: 10px 32px;
-      margin-left: 12px;
-    }
+   
   

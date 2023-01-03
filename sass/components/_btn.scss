@@ -1,25 +1,69 @@
-.button {
-    font-family: inherit;
-    cursor: pointer;
-    border: none;
-    border-radius: 4px;
-    font-weight: 500;
-    background-color: var(--bg-light-grey-color);
+
+.btn {
+  font-family: inherit;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+ 
+}
+  
+.follow-btn {
+    margin: 0 auto;
+    padding: 10px 32px;
+    margin-left: 12px;
+    @include font(16px, 700, 1.88, 0.06em);
+    @extend %flex-align;
+    color: var(--primary-white-color);
+    background: var(--accent-color);
   }
 
+  .send-btn {
+    margin: 0 auto;
+    padding: 10px 32px;
+    @include font(16px, 700, 1.88, 0.06em);
+    @extend %flex-align;
+    color: var(--primary-white-color);
+    background: var(--accent-color);
+  }
+
+  .hero-btn {
+    margin: 0 auto;
+    padding: 10px 32px;
+    @include font(16px, 700, 1.88, 0.06em);
+    @extend %flex-align;
+    color: var(--primary-white-color);
+    background: var(--accent-color);
+  }
+  
+// btn-portfolio
+
   .btn-container {
-    width: 575px;
+    width: 585px;
     @extend %flex-align;
     margin: 0 auto 51px;
   }
   
-  .btn-filter {
+  .btn-filter__portfolio {
     padding: 6px 22px;
     margin-right: 8px;
-    @include font(16px, 500, 1.56,0.04em);
-    font-family: "Roboto", sans-serif;
+    @extend %flex-align;
+    @include font(16px, 700, 1.56,0.03em);
+    background-color: var(--bg-light-grey-color);
+    color: var(--title-text-color);
+
+      &:hover,
+      &:focus {
+    color: var(--primary-white-color);
+    background-color: var(--accent-color);
+    transition: color 250ms var(--function-time),
+    background-color 250ms var(--function-time);
+    }
+      
   }
 
-  li:nth-last-child(1) .btn-filter {
-    margin-right: 0;
+  .btn-filter__item:nth-last-child(1) {
+    .btn-filter__portfolio {
+      margin-right: 0;
+      }
   }
+ 

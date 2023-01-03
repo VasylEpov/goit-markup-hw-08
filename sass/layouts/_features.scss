@@ -1,13 +1,12 @@
-.feature-list .title {
-    @include font(14px, 700, 1.14, 0.03em);
-    text-transform: uppercase;
-    color: var(--title-text-color);
-    padding-bottom: 10px;
-
-    
+.features {
+  padding-top: 94px;
+  padding-bottom: 94px;
+  
+  &__pre-title {
+    padding-bottom: 10px; 
   }
-
-  .icon-box {
+  
+  &__wrap {
     justify-content: center;
     display: flex;
     padding: 25px 100px;
@@ -16,25 +15,29 @@
     margin-bottom: 30px;
   }
   
-  .feature-list .text {
+  &__text {
     @include font(14px, null, 1.71, 0.03em); 
     width: 270px;
   }
-
-  .feature-list {
+  
+  &__list {
     display: flex;
     text-align: justify;
+    justify-content: center;
+    align-items: flex-start;
   }
   
-  .feature-list li {
+  &__item {
     margin-right: 30px;
   }
   
-  .feature-list li:last-child {
+  &__item:last-child {
     margin-right: 0;
-  }
-  
-  .container.our-work {
-    display: block;
-  }
+  } 
+} 
+
+
+
+
+
   

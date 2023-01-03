@@ -1,0 +1,39 @@
+.examples {
+  display: block;
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+  margin-right: 30px;
+  }
+
+  &__item:last-child {
+  margin-right: 0;
+  }
+
+  &__item:nth-last-child(1) {
+  margin-right: 0;
+  }
+
+  &__wrap {
+  position: relative;
+  overflow: hidden;
+  }
+  
+  &__pre-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  padding-top: 27px;
+  padding-bottom: 27px;
+  box-sizing: border-box;
+  text-align: center;
+  background-color: rgba(47, 48, 58, 0.8);
+  }
+}
+
+ 

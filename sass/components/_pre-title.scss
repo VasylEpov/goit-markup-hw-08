@@ -1,0 +1,12 @@
+.pre-title {
+    @include font(14px, 700, 1.14, 0.03em);
+    text-transform: uppercase;
+  }
+
+  .pre-title--light-theme {
+    color: var(--primary-white-color);;
+  }
+  .pre-title--dark-theme {
+    color: var(--title-text-color);
+  }
+   

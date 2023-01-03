@@ -25,23 +25,7 @@
     text-align: center;
   }
   
-  .hero-btn {
-    font-family: inherit;
-    border: none;
-    border-radius: 4px;
-    @include font(16px, 700, 1.88, 0.06em);
-    @extend %flex-align;
-    text-align: center;
-    color: var(--primary-white-color);
-    background: var(--accent-color);
-    margin: 0 auto;
-    padding: 10px 32px;
-  }
   
-  .section-title {
-    @include font(36px, null, 1.71, 0.03em);
-    text-align: center;
-    color: var(--title-text-color);
-    margin-bottom: 50px;
-  }
+  
+  
   

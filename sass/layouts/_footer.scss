@@ -8,32 +8,25 @@ address {
     background-color: var(--bg-dark-color);
   }
   
-  .address-text {
+  .footer__address {
     @include font(14px, null, 1.71, 0.03em);
     color: var(--primary-white-color);
   }
   
-  .footer-logo {
-    margin-bottom: 20px;
-  }
   
-  .footer-mail,
-  .footer-tel {
+  
+  .footer__mail,
+  .footer__tel {
     @include font(14px, null, 1.71, 0.03em);
     display: block;
     color: var(--footer-contacts-color);
   }
   
-  .footer .second-part-logo {
-    color: var(--primary-white-color);
-  }
-  .footer .title {
-    @include font(14px, 700, 1.19, 0.03em);
+  
+  .join__pre-title {
     text-align: center;
     margin-bottom: 10px;
     margin-top: 12px;
-    color: var(--primary-white-color);
-    text-transform: uppercase;
     display: flex;
     justify-content: flex-start;
   }
@@ -46,21 +39,29 @@ address {
     padding-top: 0;
   }
   
-  .footer-soc-icons {
+  .join {
     margin-left: 70px;
   }
   
-  .footer-join {
+  .follow {
     margin-left: auto;
     margin-bottom: 20px;
   }
+
+  .follow__pre-title {
+    margin-bottom: 10px;
+    margin-top: 12px;
+    display: flex;
+    justify-content: flex-start;
+  }
+
   
-.footer-join-block {
+.footer-follow-block {
   display: flex;
 
 }
 
-.icon-send {
+.icon-follow {
   fill: var(--primary-white-color);
   margin-left: 10px;
 }

@@ -1,0 +1,43 @@
+.contacts__link + .contacts__link {
+  margin-left: 50px;
+}
+
+.contacts {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  &__link {
+    @extend %flex-align;
+    @include font(14px, 500, 1.14, 0.02em);
+    color: inherit;
+    &:hover,
+    &:focus {
+      color: var(--accent-color);
+      transition: color 250ms var(--function-time);
+    }
+  }
+  &__icon1 {
+    margin-right: 10px;
+    &:hover,
+    &:focus {
+    fill: var(--accent-color);
+    transition: fill 250ms var(--function-time);
+     }
+  }
+  
+  &__icon2 {
+    margin-right: 10px;
+     &:hover,
+     &:focus {
+     fill: var(--accent-color);
+    transition: fill 250ms var(--function-time);
+   }
+  }
+}
+
+
+
+  
+  
+
+  
