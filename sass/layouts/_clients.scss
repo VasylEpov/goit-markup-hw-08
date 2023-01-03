@@ -1,46 +1,45 @@
 .clients {
-    background: var(--primary-white-color);
-    &__list {
-      display: flex;
-      justify-content: center;
-    }
-    &__item {
-      width: 170px;
-      height: 92px;
-      border: 1px solid var(--icon-logo-border);
-      border-radius: 4px;
-      
-      &:not(:last-child) {
+  background: var(--primary-white-color);
+  &__list {
+    display: flex;
+    justify-content: center;
+  }
+  &__item {
+    width: 170px;
+    height: 92px;
+    border: 1px solid var(--icon-logo-border);
+    border-radius: 4px;
+
+    &:not(:last-child) {
       margin-right: 30px;
-      }
     }
-    &__link {
-      @extend %flex-align;
-      width: 100%;
-      height: 100%;
-      justify-content: center;
-      
-      &:hover,
-      &:focus {
+  }
+  &__link {
+    @extend %flex-align;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+
+    &:hover,
+    &:focus {
       border: 1px solid var(--accent-color);
       transition: border 250ms var(--function-time);
-      }
-  
-      &:hover .clients__icon,
-      &:focus .clients__icon {
-      fill: var(--accent-color);
-      transition: fill 250ms var(--function-time);
-      }
     }
 
-      &__icon {
-      align-items: center;
-      justify-content: center;
-      fill: var(--icon-logo-border);
+    &:hover .clients__icon,
+    &:focus .clients__icon {
+      fill: var(--accent-color);
+      transition: fill 250ms var(--function-time);
     }
   }
-  
-  .container--clients {
-    display: block;
+
+  &__icon {
+    align-items: center;
+    justify-content: center;
+    fill: var(--icon-logo-border);
   }
-  
+}
+
+.container--clients {
+  display: block;
+}

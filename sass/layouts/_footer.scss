@@ -1,67 +1,44 @@
-address {
-    font-style: normal;
-  }
-  
-  .footer {
-    padding-top: 60px;
-    padding-bottom: 60px;
-    background-color: var(--bg-dark-color);
-  }
-  
-  .footer__address {
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: var(--bg-dark-color);
+  &__address {
     @include font(14px, null, 1.71, 0.03em);
     color: var(--primary-white-color);
   }
-  
-  
-  
-  .footer__mail,
-  .footer__tel {
+  &__mail,
+  &__tel {
     @include font(14px, null, 1.71, 0.03em);
     display: block;
     color: var(--footer-contacts-color);
   }
-  
-  
-  .join__pre-title {
+}
+
+.join-block {
+  margin-left: 70px;
+  &__pre-title {
     text-align: center;
     margin-bottom: 10px;
     margin-top: 12px;
     display: flex;
     justify-content: flex-start;
   }
-  
-  .footer-icon {
-    background-color: var(--bg-dark-color);
-    box-shadow: none;
-    border-radius: 0px;
-    margin-top: 20px;
-    padding-top: 0;
-  }
-  
-  .join {
-    margin-left: 70px;
-  }
-  
-  .follow {
-    margin-left: auto;
-    margin-bottom: 20px;
-  }
+}
 
-  .follow__pre-title {
+.follow-block {
+  margin-left: auto;
+  margin-bottom: 20px;
+  &__pre-title {
     margin-bottom: 10px;
     margin-top: 12px;
     display: flex;
     justify-content: flex-start;
   }
-
-  
-.footer-follow-block {
-  display: flex;
-
-}
-
-.icon-follow {
-  fill: var(--primary-white-color);
-  margin-left: 10px;
+  &__wrap {
+    display: flex;
+  }
+  &__icon {
+    fill: var(--primary-white-color);
+    margin-left: 10px;
+  }
 }
