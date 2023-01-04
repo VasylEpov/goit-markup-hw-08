@@ -4,10 +4,32 @@
   &__container {
     display: block;
   }
+  
 
   &__list {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    // justify-content: space-between;
+  }
+
+  &__item {
+    
+    flex-basis: 100%;
+      &:not(:last-child) {
+    margin-bottom: 30px;
+    
+  
+  }
+  @media screen and (min-width: 768px) {
+    flex-basis: calc((100% - 60px) / 2);
+    margin-right: 30px;
+  }
+ 
+  @media screen and (min-width: 1200px) {
+    flex-basis: calc((100% - 120px) / 4);
+    margin-right: 30px;
+    margin-bottom: 0px;
+  }
   }
 
   &__text {
@@ -32,3 +54,4 @@
     margin-bottom: 16px;
   }
 }
+
