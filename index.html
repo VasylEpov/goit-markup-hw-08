@@ -21,7 +21,7 @@
   </head>
 
   <body>
-    <!-- <header class="header container">
+    <header class="header container">
       <a href="#" class="logo header__logo link">
         <span class="logo__first-part">Web</span
         ><span class="logo__second-part">Studio</span>
@@ -63,11 +63,94 @@
           +38 096 111 11 11
         </a>
       </div>
+<!-- menu -->
+
+      <button type="button" class="menu-open">M</button>
+    
+      <div class="mobile-menu">
+      <button type="button" class="menu-close"></button>
+      <nav class="mob-navigation">
+        <ul class="mob-navigation-list list">
+          <li class="mob-navigation-item">
+            <a
+              href="./index.html"
+              class="mob-navigation-link link navigation__link--active"
+              >Студія</a
+            >
+          </li>
+
+          <li class="mob-navigation-item">
+            <a href="./portfolio.html" class="mob-navigation-link link"
+              >Портфоліо</a
+            >
+          </li>
+
+          <li class="mob-navigation-item">
+            <a href="#" class="mob-navigation-link link">Контакти </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="mob-contacts">
+        <a href="mailto:info@devstudio.com" class="mob-contacts-link link">
+          <svg width="16" height="12" class="contacts__icon1">
+            <use href="./images/icons/icons.svg#icon-envelope"></use>
+          </svg>
+          info@devstudio.com
+        </a>
+        <a href="tel:+380961111111" class="mob-contacts-link link">
+          <svg width="12" height="20" class="contacts__icon2">
+            <use href="./images/icons/icons.svg#icon-smartphone"></use>
+          </svg>
+          +38 096 111 11 11
+        </a>
+      </div>
+      <ul class="social__list list">
+        <li class="social__item">
+          <a href="#" class="social__link">
+            <svg width="20" height="20" class="social__icon">
+              <use
+                href="./images/icons/icons.svg#icon-instagram"
+              ></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social__item">
+          <a href="#" class="social__link">
+            <svg width="20" height="20" class="social__icon">
+              <use
+                href="./images/icons/icons.svg#icon-twitter"
+              ></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social__item">
+          <a href="#" class="social__link">
+            <svg width="20" height="20" class="social__icon">
+              <use
+                href="./images/icons/icons.svg#icon-facebook"
+              ></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social__item">
+          <a href="#" class="social__link">
+            <svg width="20" height="20" class="social__icon">
+              <use
+                href="./images/icons/icons.svg#icon-linkedin"
+              ></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+
+
+    </div> 
     </header>
- -->
+
 
     <!-- Hero -->
-    <!-- <main>
+    <main>
       <section class="hero">
         <h1 class="hero-title">
           Ефективні рішення для<br />
@@ -78,7 +161,7 @@
         </button>
       </section>
 
-      <section class="features container">
+      <!-- <section class="features container">
         <ul class="features__list list">
           <li class="features__item">
             <div class="features__wrap">
@@ -136,8 +219,8 @@
             </p>
           </li>
         </ul>
-      </section> -->
-     
+      </section>
+      -->
      
      
       <!-- examples of work-->
@@ -171,16 +254,29 @@
         </ul>
       </section> -->
       <!-- Our team -->
-      <section class="team section">
+      <!-- <section class="team section">
         <div class="team__container container">
           <h2 class="team title">Наша команда</h2>
           <ul class="team__list list">
             <li class="team__item">
-              <img
-                src="./images/stuff_1.jpg"
+              <picture>
+                <source srcset="./images/stuff_1.jpg 1x, 
+                ./images/stuff_1_2x.jpg 2x" media="(min-width:1200px)"/>
+                
+                <source srcset="./images/stuff_1-tab.jpg 1x, 
+                ./images/stuff_1-tab_2x.jpg 2x" media="(min-width:768x)"/>
+                
+                <source srcset="./images/stuff_1-tel.jpg 1x, 
+                ./images/stuff_1-tel_2x.jpg 2x" media="(min-width:480px)"/>
+
+                <img
+                srcset="./images/stuff_1.jpg 1x, 
+                ./images/stuff_1_2x.jpg 2x"
+                src="./images/stuff_1.jpg" 
                 alt="наші працівники"
                 width="270"
-              />
+                />
+              </picture>
               <div class="team__wrap">
                 <h3 class="team__text">Ігор Дем'яненко</h3>
                 <p class="team__special">Product Designer</p>
@@ -227,11 +323,24 @@
               </div>
             </li>
             <li class="team__item">
-              <img
-                src="./images/stuff_2.jpg"
+              <picture>
+                <source srcset="./images/stuff_1.jpg 1x, 
+                ./images/stuff_2_2x.jpg 2x" media="(min-width:1200px)"/>
+                
+                <source srcset="./images/stuff_2-tab.jpg 1x, 
+                ./images/stuff_2-tab_2x.jpg 2x" media="(min-width:768x)"/>
+                
+                <source srcset="./images/stuff_2-tel.jpg 1x, 
+                ./images/stuff_2-tel_2x.jpg 2x" media="(min-width:480px)"/>
+
+                <img
+                srcset="./images/stuff_2.jpg 1x, 
+                ./images/stuff_2_2x.jpg 2x"
+                src="./images/stuff_1.jpg" 
                 alt="наші працівники"
                 width="270"
-              />
+                />
+              </picture>
               <div class="team__wrap">
                 <h3 class="team__text">Ольга Рєпіна</h3>
                 <p class="team__special">Frontend Developer</p>
@@ -278,11 +387,24 @@
               </div>
             </li>
             <li class="team__item">
-              <img
-                src="./images/stuff_3.jpg"
+              <picture>
+                <source srcset="./images/stuff_3.jpg 1x, 
+                ./images/stuff_3_2x.jpg 2x" media="(min-width:1200px)"/>
+                
+                <source srcset="./images/stuff_3-tab.jpg 1x, 
+                ./images/stuff_3-tab_2x.jpg 2x" media="(min-width:768x)"/>
+                
+                <source srcset="./images/stuff_3-tel.jpg 1x, 
+                ./images/stuff_3-tel_2x.jpg 2x" media="(min-width:480px)"/>
+
+                <img
+                srcset="./images/stuff_1.jpg 1x, 
+                ./images/stuff_3_2x.jpg 2x"
+                src="./images/stuff_1.jpg" 
                 alt="наші працівники"
                 width="270"
-              />
+                />
+              </picture>
               <div class="team__wrap">
                 <h3 class="team__text">Микола Тарасов</h3>
                 <p class="team__special">Marketing</p>
@@ -329,11 +451,24 @@
               </div>
             </li>
             <li class="team__item">
-              <img
-                src="./images/stuff_4.jpg"
+              <picture>
+                <source srcset="./images/stuff_4.jpg 1x, 
+                ./images/stuff_4_2x.jpg 2x" media="(min-width:1200px)"/>
+                
+                <source srcset="./images/stuff_4-tab.jpg 1x, 
+                ./images/stuff_4-tab_2x.jpg 2x" media="(min-width:768x)"/>
+                
+                <source srcset="./images/stuff_4-tel.jpg 1x, 
+                ./images/stuff_4-tel_2x.jpg 2x" media="(min-width:480px)"/>
+
+                <img
+                srcset="./images/stuff_4.jpg 1x, 
+                ./images/stuff_4_2x.jpg 2x"
+                src="./images/stuff_4.jpg" 
                 alt="наші працівники"
                 width="270"
-              />
+                />
+              </picture>
               <div class="team__wrap">
                 <h3 class="team__text">Михайло Єрмаков</h3>
                 <p class="team__special">UI Designer</p>
@@ -381,7 +516,7 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
       <!-- our clients -->
       <!-- <section class="clients section">
         <div class="container container--clients">

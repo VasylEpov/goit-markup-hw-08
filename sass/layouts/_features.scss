@@ -22,22 +22,35 @@
   
   &__list {
     display: flex;
+    flex-wrap: wrap;
     text-align: justify;
     justify-content: center;
     align-items: flex-start;
   }
   
   &__item {
-    margin-right: 30px;
+    flex-basis: 100%;
+    &:not(:last-child) {
+      margin-bottom: 30px;
+      @include desktop {
+        margin-right: 30px;
+        margin-bottom: 30px;
+      }
+    }
+    &:nth-child(2n+1) {
+      @include tablet {
+      margin-right: 30px;
+      } 
+    } 
+
+    @include tablet {
+      flex-basis: calc((100% - 60px) / 2);  
+    }
+      
+
+    @include desktop {
+      flex-basis: calc((100% - 1200px) / 4);
+    }
   }
-  
-  &__item:last-child {
-    margin-right: 0;
-  } 
-} 
-
-
-
-
-
-  
+ 
+}
