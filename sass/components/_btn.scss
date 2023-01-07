@@ -10,7 +10,9 @@
 .follow-btn {
     margin: 0 auto;
     padding: 10px 32px;
-    margin-left: 12px;
+    @include desktop {
+      margin-left: 12px;
+    }
     @include font(16px, 700, 1.88, 0.06em);
     @extend %flex-align;
     color: var(--primary-white-color);

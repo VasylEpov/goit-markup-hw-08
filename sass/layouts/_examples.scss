@@ -1,5 +1,9 @@
 .examples {
-  display: block;
+  display: none;
+
+  @include desktop {
+    display: block;
+  }
 
   &__list {
     display: flex;

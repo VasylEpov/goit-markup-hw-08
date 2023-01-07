@@ -1,11 +1,21 @@
 .contacts__link + .contacts__link {
   margin-left: 50px;
+  @include tabletmax {
+    margin-left: 0;
+  }
 }
 
 .contacts {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  @include telmax {
+    display: none;
+  }
+  @include tabletmax {
+    flex-direction: column;
+    align-items: flex-start;
+  }
   &__link {
     @extend %flex-align;
     @include font(14px, 500, 1.14, 0.02em);
@@ -20,24 +30,17 @@
     margin-right: 10px;
     &:hover,
     &:focus {
-    fill: var(--accent-color);
-    transition: fill 250ms var(--function-time);
-     }
+      fill: var(--accent-color);
+      transition: fill 250ms var(--function-time);
+    }
   }
-  
+
   &__icon2 {
     margin-right: 10px;
-     &:hover,
-     &:focus {
-     fill: var(--accent-color);
-    transition: fill 250ms var(--function-time);
-   }
+    &:hover,
+    &:focus {
+      fill: var(--accent-color);
+      transition: fill 250ms var(--function-time);
+    }
   }
 }
-
-
-
-  
-  
-
-  

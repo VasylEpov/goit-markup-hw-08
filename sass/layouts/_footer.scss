@@ -12,30 +12,94 @@
     display: block;
     color: var(--footer-contacts-color);
   }
+
+  .container {
+    flex-wrap: wrap;
+  }
+
+  address {
+    margin-bottom: 60px;
+    p, a {
+      text-align: center
+    }
+
+    @include desktop {
+      margin-bottom: 0;
+      p,a {
+        text-align: left
+      }
+    }
+  }
+
+  .mail-textarea {
+    margin: 0 auto 20px;
+    @include desktop {
+      margin-bottom: 0;
+    }
+
+  }
+}
+
+.footer-contact-wrapper {
+  display: flex;
+  margin-bottom: 60px;
+  width: 100%;
+  justify-content: space-between;
+  flex-direction: column;
+
+  @include tablet {
+    flex-direction: inherit;
+  }
+
+  @include desktop {
+    width: auto;
+    margin-bottom: 0;
+  }
 }
 
 .join-block {
-  margin-left: 70px;
+  margin-left: 0;
+
+  @include desktop {
+    margin-left: 70px;
+  }
   &__pre-title {
     text-align: center;
     margin-bottom: 10px;
     margin-top: 12px;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
+    @include desktop {
+      justify-content: flex-start;
+    }
+    
   }
 }
 
 .follow-block {
   margin-left: auto;
   margin-bottom: 20px;
+  width: 100%;
+
+  @include desktop {
+    width: auto;
+    margin-top: 0;
+  }
   &__pre-title {
     margin-bottom: 10px;
     margin-top: 12px;
-    display: flex;
-    justify-content: flex-start;
+    text-align: center;
+    @include desktop {
+      text-align: left;
+    }
   }
   &__wrap {
     display: flex;
+    flex-direction: column;
+
+    @include desktop {
+      flex-direction: inherit;
+    }
   }
   &__icon {
     fill: var(--primary-white-color);

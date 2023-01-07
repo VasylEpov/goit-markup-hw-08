@@ -1,31 +1,73 @@
 .hero {
-    max-width: 1600px;
-    margin-right: auto;
-    margin-left: auto;
+  max-width: 1600px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 118px;
+  padding-bottom: 118px;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url("../images/hero/tel-hero.jpg");
+  @include retina {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../images/hero/tel-2x-hero.jpg");
+  }
+  @include tablet {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url("../images/hero/tablet-hero.jpg");
+      @include retina {
+        background-image: linear-gradient(
+            to right,
+            rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)
+          ),
+          url("../images/hero/tablet-2x-hero.jpg");
+      }
+  }
+  @include desktop {
+    padding-top: 200px;
+    padding-bottom: 200px;
     background-image: linear-gradient(
         to right,
         rgba(47, 48, 58, 0.4),
         rgba(47, 48, 58, 0.4)
       ),
       url("../images/hero_img.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    padding-top: 200px;
-    padding-bottom: 200px;
+
+    @include retina {
+      background-image: linear-gradient(
+          to right,
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url("../images/hero/desktop-2x-hero.jpg");
+    }
   }
   
-  .hero-title {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.hero-title {
+  @include font(26px, 900, 1.36, 0.06em);
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--primary-white-color);
+  margin: 0 auto 35px;
+  text-align: center;
+  @include desktop {
     @include font(44px, 900, 1.36, 0.06em);
-    text-align: center;
-    text-transform: uppercase;
-    color: var(--primary-white-color);
-    margin: 0 auto 35px;
-    text-align: center;
   }
-  
-  
-  
-  
-  
+}
